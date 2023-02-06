@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./public",
+    "module": "es6",
+    "target": "es6",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "jsxImportSource": "react"
+  },
+  "include": ["src/**/*"]
+}
