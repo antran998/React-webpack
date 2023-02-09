@@ -8,20 +8,23 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package-lock.json" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
           - v1-dependencies-
       - run:
+          name: Install Yarn
+          command: npm install --g yarn
+      - run:
           name: Install dependencies
-          command: npm install
+          command: yarn install
       - save_cache:
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
       - run:
           name: Build
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
-              npm run build
+              yarn build
             fi
       - persist_to_workspace:
           root: .
