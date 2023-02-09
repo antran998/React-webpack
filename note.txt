@@ -1,0 +1,33 @@
+- Packages for react:
+    + @types/react
+    + @types/react-dom
+    + react
+    + react-dom
+- Packages for typescript:
+    + typescript
+    + ts-loader
+- Packages for scss:
+    + css-loader
+    + node-sass
+    + sass
+    + sass-loader
+    + style-loader
+-Packages for webpack:
+    + @babel/core
+    + @babel/preset-env
+    + @babel/preset-react
+    + @babel/preset-typescript
+    + babel-loader
+    + copy-webpack-plugin
+    + html-webpack-plugin
+    + url-loader
+    + webpack
+    + webpack-cli
+    + webpack-dev-server
+- Packages for unit test:
+    + jest
+    + ts-jest
+    + @testing-library/react 
+    + @testing-library/jest-dom
+    + jest-environment-jsdom
+    + identity-obj-proxy -- For scss in test
