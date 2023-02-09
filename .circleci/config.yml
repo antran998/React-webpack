@@ -8,16 +8,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}
-          - v1-dependencies-
-      - run:
-          name: Install Yarn
-          command: npm install --global yarn
+            - yarn-deps-{{ checksum "yarn.lock" }}
+            - yarn-deps
       - run:
           name: Install dependencies
           command: yarn install
       - save_cache:
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: yarn-deps-{{ checksum "yarn.lock" }}-{{ epoch }}
           paths:
             - node_modules
       - run:
